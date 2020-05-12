@@ -9,5 +9,7 @@ starts mysql and redis server(deamonized)
 
 copy file to /bin
 make excecutable
+
 delete everything you dont need from the file
+
 run anywhere by calling filename
