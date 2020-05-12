@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# defining globals
+## text styling
+NONE='\033[00m'
+RED='\033[01;31m'
+GREEN='\033[01;32m'
+YELLOW='\033[01;33m'
+PURPLE='\033[01;35m'
+CYAN='\033[01;36m'
+WHITE='\033[01;37m'
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+
+echo ""
+echo ""
+echo -e "${CYAN}updating distro:${NONE}"
+
+echo -e "${CYAN} - update${NONE}"
+sudo apt update
+
+echo -e "${CYAN} - upgrade${NONE}"
+sudo apt upgrade -y
+
+echo -e "${CYAN} - cleaning${NONE}"
+sudo apt autoremove -y && sudo apt clean -y
+
+echo -e "${CYAN}starting database services:${NONE}"
+
+echo -e "${CYAN}  - mysql${NONE}"
+sudo service mysql restart 
+
+echo -e "${CYAN}  - redis${NONE}"
+redis-server --daemonize yes
+
+echo -e "${CYAN}startup complete${NONE}"
+
+tput sgr0
