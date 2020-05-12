@@ -8,7 +8,8 @@ starts mysql and redis server(deamonized)
 ## setup
 
 copy file to /bin
-make excecutable
+
+make excecutable ```chmod +x <<filename>>```
 
 delete everything you dont need from the file
 
