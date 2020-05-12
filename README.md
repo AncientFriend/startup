@@ -5,7 +5,7 @@ updates/upgrades/cleans ubuntu installation
 
 starts mysql and redis server(deamonized)
 
-##setup
+#setup
 
 copy file to /bin
 make excecutable
