@@ -33,6 +33,10 @@ sudo service mysql restart
 echo -e "${CYAN}  - redis${NONE}"
 redis-server --daemonize yes
 
+
+echo -e "${CYAN}  - cron${NONE}"
+sudo service cron restart
+
 echo -e "${CYAN}startup complete${NONE}"
 
 tput sgr0
